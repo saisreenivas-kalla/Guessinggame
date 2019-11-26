@@ -1,5 +1,5 @@
 # The name of the project is Guessing game 
 
-Tue Nov 26 17:18:27 IST 2019
+Tue Nov 26 17:25:25 IST 2019
 
- ## The program contains  lines of code
+ ## The program contains 24 lines of code
