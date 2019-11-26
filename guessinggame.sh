@@ -1,7 +1,9 @@
 a=$(ls -1|wc -l)                                                                                                        
 read -p "Guess number of files : " b                                                                                    
 fin()                                                                                                                   
-{                                                                                                                       
+{
+until [ $a -eq $b ]
+do                                                                                                                       
 if [ $a -gt $b ]                                                                                                       
 then                                                                                                                   
 	echo "Guess a larger number"                                                                                            
@@ -11,14 +13,9 @@ elif [ $a -lt $b ]
 then                                                                                                                    
 	echo "Guess a smaller number"                                                                                          
 	read -p "Guess number of files : " b                                                                                    
-	fin                                                                                                             
-else                                                                                                                    
-	echo "welldone"                                                                                                 
-fi                                                                                                                      
-}                                                                                                                       
-if [ $b -gt 0 ]                                                                                                         
-then                                                                                                                   
-	fin                                                                                                             
-else                                                                                                                    
-	echo "enter a positive number"                                                                                  
-fi  
+	fin                                                                                                                                                              
+fi
+done
+}
+fin
+echo "well done"
